@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/context/ http://www.springframework.org/schema/context/spring-context.xsd">
+	<bean id="employee" class="com.virtusa.bean.Employee">
+		<constructor-arg value="Jayraj"></constructor-arg>
+		<constructor-arg value="001"></constructor-arg>
+		<constructor-arg ref="address"></constructor-arg>
+		<constructor-arg ref="unit"></constructor-arg>
+	</bean>
+	<bean id="address" class="com.virtusa.bean.Address">
+		<constructor-arg value="Satana"></constructor-arg>
+		<constructor-arg value="Maharashtra"></constructor-arg>
+		<constructor-arg value="India"></constructor-arg>
+		
+	</bean>
+	<bean id="unit" class="com.virtusa.bean.Unit">
+		<constructor-arg value="Telecom"></constructor-arg>
+	</bean>
+</beans>
